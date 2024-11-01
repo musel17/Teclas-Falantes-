@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Comunicação para Austimo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('background.jpg'); /* Substitua pelo caminho da imagem de fundo desejada */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-color: #ffeb3b; /* Amarelo brilhante */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+        }
+        .header {
+            width: 100%;
+            background-color: #2196F3; /* Cor do cabeçalho - azul */
+            color: #fff; /* Cor do texto do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif; /* Fonte do cabeçalho */
+            border-bottom-left-radius: 30px; /* Bordas arredondadas */
+            border-bottom-right-radius: 30px; /* Bordas arredondadas */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do cabeçalho */
+        }
+        .button-container {
+            display: flex; /* Usar flexbox para os botões ficarem lado a lado */
+            flex-wrap: wrap; /* Permitir quebra de linha se necessário */
+            justify-content: center; /* Centralizar os botões */
+            gap: 15px; /* Espaçamento entre os botões */
+            padding: 20px; /* Adicionar preenchimento */
+            width: 100%; /* Largura total para o container */
+        }
+        .button {
+            width: 120px; /* Largura do botão */
+            height: 70px; /* Altura do botão */
+            font-size: 20px; /* Tamanho da fonte */
+            color: white; /* Cor do texto */
+            background-color: #4caf50; /* Verde */
+            border: none;
+            border-radius: 20px; /* Bordas mais arredondadas */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; /* Efeito de transição */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra dos botões */
+            display: flex; /* Centralizar texto dentro do botão */
+            align-items: center;
+            justify-content: center;
+            font-weight: bold; /* Fonte em negrito */
+            text-transform: uppercase; /* Texto em maiúsculas */
+        }
+        .button:hover {
+            background-color: #388e3c; /* Cor ao passar o mouse */
+            transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+        }
+    </style>
+    <script>
+        function playSound(soundFile) {
+            var audio = new Audio(soundFile);
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">Comunicação em Teclas</div>
+    <div class="button-container">
+        <button class="button" onclick="playSound('agua.mp3')">Água</button>
+        <button class="button" onclick="playSound('fome.mp3')">Fome</button>
+        <button class="button" onclick="playSound('banheiro.mp3')">Banheiro</button>
+        <button class="button" onclick="playSound('sono.mp3')">Sono</button>
+        <button class="button" onclick="playSound('feliz.mp3')">Feliz</button>
+        <button class="button" onclick="playSound('triste.mp3')">Triste</button>
+        <button class="button" onclick="playSound('dor_de_barriga.mp3')">Dor Na Barriga</button>
+        <button class="button" onclick="playSound('te_amo.mp3')">Te Amo</button>
+    </div>
+</body>
+</html>
